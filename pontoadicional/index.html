@@ -243,6 +243,31 @@
   .insta-caption-text b{ font-weight: 700; margin-right: 4px; }
   .insta-tag{ color: #00376b; }
 
+  /* BOTÃO DE CTA DO INSTAGRAM NO MOCKUP */
+  .insta-cta-wrap {
+    padding: 0 16px 16px;
+    background: #fff;
+  }
+  .btn-insta-like {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: #fff;
+    font-weight: 700;
+    font-size: 13.5px;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    transition: transform 0.2s var(--ease), opacity 0.2s var(--ease);
+    box-shadow: 0 4px 12px rgba(220, 39, 67, 0.25);
+  }
+  .btn-insta-like:hover {
+    opacity: 0.95;
+    transform: translateY(-2px);
+  }
+
   /* ---------- form card ---------- */
   .form-card{
     position:relative; z-index:3;
@@ -502,12 +527,43 @@
   .toast-text b{ color:var(--navy-950); }
   @media (max-width:560px){ .toast{ left:12px; right:12px; max-width:none; bottom:12px; } }
 
+  /* ---------- BOTÃO FLUTUANTE DO WHATSAPP ---------- */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 998;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+  }
+  .whatsapp-float svg {
+    width: 34px;
+    height: 34px;
+    fill: currentColor;
+  }
+
   @media (max-width:980px){
     .hero-grid-2col{ grid-template-columns:1fr; }
   }
   @media (max-width:640px){
     section{ padding:50px 0; }
     .footer-top{ flex-direction:column; }
+    .whatsapp-float { bottom: 20px; right: 20px; width: 54px; height: 54px; }
+    .whatsapp-float svg { width: 30px; height: 30px; }
   }
 </style>
 </head>
@@ -518,7 +574,7 @@
   <div class="header-inner">
     <img class="logo-img" src="logotopo.png" alt="Wianet Telecom">
     <div class="header-right">
-      <a class="header-phone" href="https://wa.me/5551941060689">
+      <a class="header-phone" href="https://wa.me/5551941060689" target="_blank" rel="noopener">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         (51) 4106-0689
       </a>
@@ -539,10 +595,10 @@
   <div class="wrap">
     <div class="hero-top-info">
       <div class="hero-eyebrow">
-        <span class="eyebrow"><span class="dot"></span> Sorteio Mensal · Exclusivo Clientes Wianet</span>
+        <span class="eyebrow"><span class="dot"></span> Sorteio em 30/08/2026 · Exclusivo Clientes Wianet</span>
       </div>
       <h1>Wi-Fi forte em <span class="accent">todo canto</span> da sua casa.</h1>
-      <p>Cadastre-se abaixo e concorra a um Ponto Adicional grátis todos os meses.</p>
+      <p>Cadastre-se abaixo e concorra a um Ponto Adicional grátis no sorteio do dia 30/08/2026.</p>
     </div>
 
     <div class="hero-grid-2col">
@@ -573,8 +629,15 @@
           <div class="insta-caption">
             <span class="insta-likes">Curtido por clientes_wianet e milhares de pessoas</span>
             <div class="insta-caption-text">
-              <b>wianettelecomltda</b> Concorra a um Ponto Adicional GRÁTIS! Preencha seus dados ao lado para participar do sorteio. <span class="insta-tag">#WianetTelecom #SorteioMensal</span>
+              <b>wianettelecomltda</b> Concorra a um Ponto Adicional GRÁTIS! Preencha seus dados ao lado para participar do sorteio no dia 30/08/2026. <span class="insta-tag">#WianetTelecom #SorteioMensal</span>
             </div>
+          </div>
+          <!-- BOTÃO CTA PARA CURTIR A POSTAGEM -->
+          <div class="insta-cta-wrap">
+            <a href="https://www.instagram.com/p/Db35fXcjxXd/" target="_blank" rel="noopener" class="btn-insta-like">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              Curtir a publicação oficial no Instagram
+            </a>
           </div>
         </div>
       </div>
@@ -584,7 +647,7 @@
         <div class="form-card">
           <span class="form-card-tag"><span class="dot"></span> Vagas abertas</span>
           <h3>Cadastre-se agora</h3>
-          <p class="hint">Preencha seus dados para garantir sua participação no sorteio.</p>
+          <p class="hint">Preencha seus dados para garantir sua participação no sorteio do dia 30/08/2026.</p>
 
           <form id="raffle-form" novalidate>
             <div class="field" data-field="nome">
@@ -652,7 +715,7 @@
   <div class="modal-card">
     <div class="modal-icon">🎉</div>
     <h3>Cadastro Confirmado!</h3>
-    <p>Boa sorte! Você já está concorrendo ao Ponto Adicional grátis deste mês. Acompanhe pelo nosso Instagram <strong>@wianettelecomltda</strong>.</p>
+    <p>Boa sorte! Você já está concorrendo ao Ponto Adicional grátis no sorteio do dia <strong>30/08/2026</strong>. Lembre-se de curtir a postagem oficial e acompanhar pelo nosso Instagram <strong>@wianettelecomltda</strong>.</p>
     <div class="modal-code" id="modal-success-code">CÓDIGO DA PARTICIPAÇÃO: —</div>
     <button class="modal-close-btn" onclick="closeModal()">Entendido!</button>
   </div>
@@ -669,13 +732,13 @@
     <div class="steps">
       <div class="step reveal">
         <div class="step-num">Cadastro</div>
-        <h4>Preencha o formulário</h4>
-        <p>Informe nome, e-mail, CPF/contrato e WhatsApp.</p>
+        <h4>Preencha e curta</h4>
+        <p>Preencha o formulário e curta a publicação oficial no Instagram.</p>
       </div>
       <div class="step reveal">
         <div class="step-num">Sorteio</div>
-        <h4>Sorteio gravado</h4>
-        <p>Realizado todo início de mês com gravação no Instagram.</p>
+        <h4>Sorteio em 30/08/2026</h4>
+        <p>Realizado na data com gravação no Instagram oficial.</p>
       </div>
       <div class="step reveal">
         <div class="step-num">Contato</div>
@@ -744,17 +807,24 @@
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
+          Quando será realizado o sorteio?
+          <span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a"><p>O próximo sorteio será realizado no dia 30/08/2026. Lembre-se de realizar o cadastro e curtir a publicação oficial para validar sua participação.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
           Quem pode participar do sorteio?
           <span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-a"><p>Todo cliente Wianet com contrato ativo e em dia com a mensalidade pode se cadastrar e concorrer, todos os meses.</p></div>
+        <div class="faq-a"><p>Todo cliente Wianet com contrato ativo e em dia com a mensalidade pode se cadastrar e concorrer.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">
           Como vou saber se fui sorteado?
           <span class="plus"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
         </button>
-        <div class="faq-a"><p>Entramos em contato diretamente pelo WhatsApp cadastrado em até 48h após o sorteio, e também anunciamos o resultado no Instagram @wianet.</p></div>
+        <div class="faq-a"><p>Entramos em contato diretamente pelo WhatsApp cadastrado em até 48h após o sorteio, e também anunciamos o resultado no Instagram @wianettelecomltda.</p></div>
       </div>
     </div>
   </div>
@@ -769,9 +839,9 @@
         <img class="footer-logo-img" src="logorodape.png" alt="Wianet Telecom">
         <p>Internet de fibra óptica com atendimento local. Conectividade de verdade para sua casa e sua família.</p>
         <div class="social-row">
-          <a href="https://www.instagram.com/wianettelecomltda/" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></a>
-          <a href="https://www.facebook.com/profile.php?id=61555660452120" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-          <a href="https://wa.me/5551941060689" aria-label="Telefone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+          <a href="https://www.instagram.com/wianettelecomltda/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61555660452120" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://wa.me/5551941060689" target="_blank" rel="noopener" aria-label="Telefone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
         </div>
       </div>
       <div class="footer-cols">
@@ -790,10 +860,17 @@
     </div>
     <div class="footer-bottom">
       <span>© <span id="year"></span> Wianet Telecom. Todos os direitos reservados.</span>
-      <span>Sorteio válido apenas para clientes com contrato ativo. Consulte o regulamento completo.</span>
+      <span>Sorteio a ser realizado em 30/08/2026. Válido apenas para clientes com contrato ativo. Consulte o regulamento completo.</span>
     </div>
   </div>
 </footer>
+
+<!-- ================= BOTÃO FLUTUANTE DO WHATSAPP ================= -->
+<a href="https://wa.me/5551941060689" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contato via WhatsApp">
+  <svg viewBox="0 0 32 32">
+    <path d="M16 2A13 13 0 0 0 4.68 21.25L3 27.5l6.43-1.64A13 13 0 1 0 16 2zm0 23.8a10.74 10.74 0 0 1-5.46-1.5l-.39-.23-4.06 1 1.05-3.92-.25-.4A10.8 10.8 0 1 1 16 25.8zm5.92-8.07c-.32-.16-1.92-.95-2.22-1.06s-.52-.16-.74.16-.85 1.06-1.05 1.28-.39.24-.71.08a9 9 0 0 1-2.64-1.63 9.9 9.9 0 0 1-1.83-2.28c-.19-.32 0-.49.14-.65s.32-.37.48-.56a2.1 2.1 0 0 0 .32-.53.58.58 0 0 0 0-.56c-.08-.16-.74-1.78-1-2.43s-.56-.54-.77-.55h-.66a1.27 1.27 0 0 0-.92.43 3.86 3.86 0 0 0-1.2 2.87 6.72 6.72 0 0 0 1.41 3.56 15.37 15.37 0 0 0 5.9 5.21c2.19.95 2.64.76 3.12.72a2.65 2.65 0 0 0 1.76-1.24 2.18 2.18 0 0 0 .15-1.24c-.08-.12-.24-.2-.56-.36z"/>
+  </svg>
+</a>
 
 <!-- ================= LIVE TOAST ================= -->
 <div class="toast" id="toast">
