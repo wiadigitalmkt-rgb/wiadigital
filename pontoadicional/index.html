@@ -384,25 +384,6 @@
   .reveal{ opacity:0; transform:translateY(26px); transition:opacity .7s var(--ease), transform .7s var(--ease); }
   .reveal.in{ opacity:1; transform:translateY(0); }
 
-  /* ---------- benefits ---------- */
-  .benefits-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
-  @media (max-width:900px){ .benefits-grid{ grid-template-columns:1fr; } }
-  .benefit-card{
-    background:var(--card); border:1px solid var(--border); border-radius:var(--radius-lg);
-    padding:32px 28px; box-shadow:var(--shadow-sm);
-    transition:transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
-  }
-  .benefit-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow-md); border-color:transparent; }
-  .benefit-icon{
-    width:52px; height:52px; border-radius:14px; background:var(--navy-900);
-    display:flex; align-items:center; justify-content:center; color:var(--orange-500);
-    margin-bottom:20px;
-  }
-  .benefit-card:nth-child(2) .benefit-icon{ background:var(--orange-500); color:#fff; }
-  .benefit-card:nth-child(3) .benefit-icon{ background:var(--cyan-400); color:var(--navy-950); }
-  .benefit-card h3{ font-size:19px; color:var(--navy-950); font-weight:700; }
-  .benefit-card p{ margin-top:10px; color:var(--text-600); font-size:14.5px; line-height:1.6; }
-
   /* ---------- how it works ---------- */
   .how{ background:var(--navy-950); color:#fff; overflow:hidden; position:relative; }
   .how::before{
@@ -445,34 +426,6 @@
     }
   }
 
-  /* ---------- countdown ---------- */
-  .countdown-section{
-    background:linear-gradient(135deg, var(--orange-500), #FFB347);
-    border-radius:32px; margin:0 24px; padding:40px 40px;
-    max-width:1132px; margin-left:auto; margin-right:auto;
-    display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;
-    box-shadow:0 20px 50px rgba(247,147,30,0.28);
-    position:relative; overflow:hidden;
-  }
-  .countdown-section::before{
-    content:''; position:absolute; inset:0;
-    background-image:radial-gradient(rgba(255,255,255,0.35) 1.5px, transparent 1.5px);
-    background-size:22px 22px; opacity:0.35;
-  }
-  .countdown-text{ position:relative; z-index:2; max-width:380px; }
-  .countdown-text .section-eyebrow{ color:rgba(15,27,69,0.7); }
-  .countdown-text .section-eyebrow::before{ background:var(--navy-950); }
-  .countdown-text h2{ color:var(--navy-950); font-size:clamp(1.5rem, 2.6vw, 2rem); font-weight:800; }
-  .countdown-text p{ margin-top:10px; color:rgba(15,27,69,0.75); font-size:15px; line-height:1.55; }
-  .countdown-timer{ display:flex; gap:12px; position:relative; z-index:2; }
-  .timer-box{
-    background:var(--navy-950); color:#fff; border-radius:16px; padding:16px 14px;
-    min-width:74px; text-align:center; box-shadow:0 10px 24px rgba(10,21,51,0.35);
-  }
-  .timer-box .num{ font-family:'IBM Plex Mono', monospace; font-size:28px; font-weight:600; }
-  .timer-box .lbl{ font-size:10px; text-transform:uppercase; letter-spacing:0.08em; color:rgba(255,255,255,0.55); margin-top:4px; }
-  @media (max-width:560px){ .timer-box{ min-width:58px; padding:12px 8px; } .timer-box .num{ font-size:20px; } }
-
   /* ---------- testimonials ---------- */
   .testi-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
   @media (max-width:900px){ .testi-grid{ grid-template-columns:1fr; } }
@@ -507,16 +460,6 @@
   .faq-item.open .faq-q .plus{ transform:rotate(135deg); background:var(--orange-500); border-color:var(--orange-500); color:#fff; }
   .faq-a{ max-height:0; overflow:hidden; transition:max-height .4s var(--ease); }
   .faq-a p{ padding:0 4px 22px; color:var(--text-600); font-size:14.5px; line-height:1.65; max-width:680px; }
-
-  /* ---------- final cta ---------- */
-  .final-cta{
-    text-align:center; background:var(--navy-950); color:#fff; border-radius:32px;
-    margin:0 24px; padding:52px 32px; max-width:1132px; margin-left:auto; margin-right:auto;
-    position:relative; overflow:hidden;
-  }
-  .final-cta h2{ font-size:clamp(1.6rem, 3vw, 2.3rem); font-weight:800; max-width:600px; margin:0 auto; }
-  .final-cta p{ margin-top:14px; color:rgba(255,255,255,0.6); font-size:15.5px; }
-  .final-cta .btn-cta{ margin-top:28px; display:inline-flex; padding:15px 30px; font-size:15.5px; }
 
   /* ---------- footer ---------- */
   footer{ background:var(--navy-950); color:rgba(255,255,255,0.55); padding:56px 0 28px; }
@@ -559,7 +502,6 @@
   }
   @media (max-width:640px){
     section{ padding:50px 0; }
-    .countdown-section, .final-cta{ margin:0 16px; padding:32px 20px; border-radius:24px; }
     .footer-top{ flex-direction:column; }
   }
 </style>
@@ -711,39 +653,6 @@
   </div>
 </div>
 
-<!-- ================= BENEFITS ================= -->
-<section class="wrap">
-  <div class="section-head reveal">
-    <span class="section-eyebrow">Por que participar</span>
-    <h2>Mais do que um sorteio, um upgrade pra sua internet</h2>
-    <p>O Ponto Adicional estende o sinal Wi-Fi da sua casa, eliminando aquelas áreas onde o sinal não chega — sem trocar de plano e sem custo nenhum se você for sorteado.</p>
-  </div>
-
-  <div class="benefits-grid">
-    <div class="benefit-card reveal">
-      <div class="benefit-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-      </div>
-      <h3>Sinal em todo cômodo</h3>
-      <p>Acabe com aquela zona morta no quarto do fundo, no quintal ou no segundo andar. Cobertura Wi-Fi de ponta a ponta da casa.</p>
-    </div>
-    <div class="benefit-card reveal">
-      <div class="benefit-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-      </div>
-      <h3>Zero custo se ganhar</h3>
-      <p>Equipamento, visita técnica e instalação por nossa conta. Você só aproveita a internet mais rápida em casa.</p>
-    </div>
-    <div class="benefit-card reveal">
-      <div class="benefit-icon">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-      </div>
-      <h3>Participação em 30 segundos</h3>
-      <p>Basta ser cliente Wianet ativo. Preencha o cadastro e pronto — você já está concorrendo todo mês.</p>
-    </div>
-  </div>
-</section>
-
 <!-- ================= HOW IT WORKS ================= -->
 <section class="how">
   <div class="wrap">
@@ -773,23 +682,6 @@
         <h4>Instalação agendada</h4>
         <p>Visita técnica e instalação do ponto adicional 100% grátis.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= COUNTDOWN ================= -->
-<section>
-  <div class="countdown-section reveal">
-    <div class="countdown-text">
-      <span class="section-eyebrow">Próximo sorteio</span>
-      <h2>Faltam poucos dias para o resultado</h2>
-      <p>Cadastre-se agora para garantir sua vaga na próxima rodada do sorteio mensal.</p>
-    </div>
-    <div class="countdown-timer" id="countdown">
-      <div class="timer-box"><div class="num" id="cd-days">00</div><div class="lbl">Dias</div></div>
-      <div class="timer-box"><div class="num" id="cd-hours">00</div><div class="lbl">Horas</div></div>
-      <div class="timer-box"><div class="num" id="cd-min">00</div><div class="lbl">Min</div></div>
-      <div class="timer-box"><div class="num" id="cd-sec">00</div><div class="lbl">Seg</div></div>
     </div>
   </div>
 </section>
@@ -859,15 +751,6 @@
   </div>
 </section>
 
-<!-- ================= FINAL CTA ================= -->
-<section>
-  <div class="final-cta reveal">
-    <h2>Sua casa toda coberta por um Wi-Fi mais forte começa com um cadastro.</h2>
-    <p>Leva menos de 1 minuto. Concorra gratuitamente ao sorteio deste mês.</p>
-    <a href="#cadastro" class="btn-cta">Quero concorrer agora</a>
-  </div>
-</section>
-
 <!-- ================= FOOTER ================= -->
 <footer>
   <div class="wrap">
@@ -932,40 +815,6 @@ const io = new IntersectionObserver((entries) => {
   });
 }, { threshold:0.15 });
 revealEls.forEach(el => io.observe(el));
-
-/* ---------- countdown to next draw ---------- */
-function getNextDraw(){
-  const now = new Date();
-  let year = now.getFullYear();
-  let month = now.getMonth();
-  let target = new Date(year, month, 25, 20, 0, 0);
-  if(now > target){
-    target = new Date(year, month + 1, 25, 20, 0, 0);
-  }
-  return target;
-}
-const nextDraw = getNextDraw();
-function pad(n){ return String(n).padStart(2,'0'); }
-function tickCountdown(){
-  const diff = nextDraw - new Date();
-  if(diff <= 0){
-    document.getElementById('cd-days').textContent = '00';
-    document.getElementById('cd-hours').textContent = '00';
-    document.getElementById('cd-min').textContent = '00';
-    document.getElementById('cd-sec').textContent = '00';
-    return;
-  }
-  const d = Math.floor(diff / (1000*60*60*24));
-  const h = Math.floor((diff / (1000*60*60)) % 24);
-  const m = Math.floor((diff / (1000*60)) % 60);
-  const s = Math.floor((diff / 1000) % 60);
-  document.getElementById('cd-days').textContent = pad(d);
-  document.getElementById('cd-hours').textContent = pad(h);
-  document.getElementById('cd-min').textContent = pad(m);
-  document.getElementById('cd-sec').textContent = pad(s);
-}
-tickCountdown();
-setInterval(tickCountdown, 1000);
 
 /* ---------- FAQ accordion ---------- */
 document.querySelectorAll('.faq-item').forEach(item => {
