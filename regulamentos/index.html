@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regulamento do Sorteio & Política de Privacidade — Wianet Telecom</title>
+<meta name="description" content="Regulamento oficial do sorteio de Ponto Adicional Grátis e Política de Privacidade da Wianet Telecom.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --navy-950:#0A1533;
+    --navy-900:#0F1B45;
+    --navy-800:#182A5E;
+    --navy-700:#233a7d;
+    --orange-500:#F7931E;
+    --orange-600:#E07A00;
+    --orange-100:#FFEBCC;
+    --cyan-400:#2DD4E8;
+    --bg:#F5F7FC;
+    --card:#FFFFFF;
+    --text-900:#0E1630;
+    --text-600:#4B5573;
+    --text-400:#8A93AD;
+    --border:#E3E8F5;
+    --shadow-sm: 0 2px 8px rgba(15,27,69,0.06);
+    --shadow-md: 0 12px 32px rgba(15,27,69,0.10);
+    --shadow-lg: 0 24px 60px rgba(15,27,69,0.16);
+    --radius-lg: 24px;
+    --radius-md: 16px;
+    --radius-sm: 10px;
+    --ease: cubic-bezier(.22,1,.36,1);
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Manrope', sans-serif;
+    background:var(--bg);
+    color:var(--text-900);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; display:block;}
+  h1,h2,h3,h4{font-family:'Sora', sans-serif; letter-spacing:-0.02em; line-height:1.2;}
+  a{color:inherit; text-decoration:none;}
+  button{font-family:inherit; cursor:pointer; border:none;}
+  .wrap{max-width:1000px; margin:0 auto; padding:0 24px; width:100%;}
+  ::selection{background:var(--orange-500); color:#fff;}
+
+  /* ---------- focus ---------- */
+  a:focus-visible, button:focus-visible{
+    outline:3px solid var(--cyan-400);
+    outline-offset:2px;
+    border-radius:6px;
+  }
+
+  /* ---------- utility badges ---------- */
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--orange-100); color:var(--orange-600);
+    font-family:'IBM Plex Mono', monospace; font-weight:600; font-size:12.5px;
+    letter-spacing:0.06em; text-transform:uppercase;
+    padding:8px 14px; border-radius:999px;
+  }
+
+  /* ---------- header ---------- */
+  header{
+    position:relative; z-index:10;
+    background:rgba(255,255,255,0.82);
+    backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--border);
+    transition:box-shadow .3s var(--ease), padding .3s var(--ease);
+  }
+  header.scrolled{ box-shadow:var(--shadow-sm); }
+  .header-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 24px;
+    max-width:1180px; margin:0 auto;
+  }
+  .logo-img{ height:38px; width:auto; object-fit:contain; }
+  .header-right{ display:flex; align-items:center; gap:20px; }
+  .header-phone{
+    display:flex; align-items:center; gap:8px;
+    color:var(--navy-900); font-weight:700; font-size:14.5px;
+  }
+  .header-phone svg{ flex-shrink:0; }
+  .btn-cta{
+    background:var(--orange-500); color:#fff; font-weight:700; font-size:14.5px;
+    padding:11px 20px; border-radius:999px;
+    box-shadow:0 6px 16px rgba(247,147,30,0.35);
+    transition:transform .25s var(--ease), box-shadow .25s var(--ease), background .25s var(--ease);
+    white-space:nowrap;
+  }
+  .btn-cta:hover{ transform:translateY(-2px) scale(1.02); box-shadow:0 10px 22px rgba(247,147,30,0.45); background:var(--orange-600); }
+  @media (max-width:640px){ .header-phone{display:none;} }
+
+  /* ---------- content section ---------- */
+  .doc-section{
+    padding:60px 0 90px;
+    background:
+      radial-gradient(900px 500px at 80% -10%, rgba(45,212,232,0.08), transparent 60%),
+      radial-gradient(800px 400px at 10% 10%, rgba(247,147,30,0.08), transparent 55%);
+  }
+
+  .doc-header{
+    text-align:center;
+    margin-bottom:40px;
+  }
+  .doc-header h1{
+    font-size:clamp(2rem, 3.5vw, 2.8rem);
+    color:var(--navy-950);
+    font-weight:800;
+    margin-top:14px;
+  }
+
+  .doc-card{
+    background:var(--card);
+    border-radius:var(--radius-lg);
+    box-shadow:var(--shadow-md);
+    border:1px solid var(--border);
+    padding:40px 48px;
+  }
+  @media (max-width:640px){
+    .doc-card{ padding:28px 20px; }
+  }
+
+  .doc-block{
+    margin-bottom:36px;
+  }
+  .doc-block:last-child{ margin-bottom:0; }
+
+  .doc-block h2{
+    font-size:20px;
+    color:var(--navy-950);
+    font-weight:700;
+    margin-bottom:14px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .doc-block h2::before{
+    content:'';
+    display:inline-block;
+    width:4px;
+    height:20px;
+    background:var(--orange-500);
+    border-radius:2px;
+  }
+
+  .doc-block p, .doc-block li{
+    color:var(--text-600);
+    font-size:15px;
+    line-height:1.7;
+    margin-bottom:12px;
+  }
+
+  .doc-block ul{
+    padding-left:20px;
+    margin-bottom:12px;
+  }
+  .doc-block li{
+    margin-bottom:8px;
+  }
+
+  .back-link{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--orange-600);
+    font-weight:700;
+    font-size:14.5px;
+    margin-bottom:20px;
+    transition:transform 0.2s;
+  }
+  .back-link:hover{ transform:translateX(-4px); }
+
+  /* ---------- footer ---------- */
+  footer{ background:var(--navy-950); color:rgba(255,255,255,0.55); padding:56px 0 28px; }
+  .footer-top{ display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; padding-bottom:36px; border-bottom:1px solid rgba(255,255,255,0.1); }
+  .footer-brand .footer-logo-img{ height:36px; width:auto; display:block; }
+  .footer-brand p{ margin-top:16px; font-size:13.5px; max-width:280px; line-height:1.6; }
+  .footer-cols{ display:flex; gap:56px; flex-wrap:wrap; }
+  .footer-col h5{ color:#fff; font-family:'IBM Plex Mono', monospace; font-size:12px; text-transform:uppercase; letter-spacing:0.07em; margin-bottom:16px; }
+  .footer-col a, .footer-col p{ display:block; font-size:13.5px; margin-bottom:10px; transition:color .2s; }
+  .footer-col a:hover{ color:#fff; }
+  .footer-bottom{ display:flex; justify-content:space-between; padding-top:24px; font-size:12.5px; flex-wrap:wrap; gap:10px; }
+  .social-row{ display:flex; gap:10px; margin-top:16px; }
+  .social-row a{
+    width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,0.08);
+    display:flex; align-items:center; justify-content:center; transition:background .2s, transform .2s;
+  }
+  .social-row a:hover{ background:var(--orange-500); transform:translateY(-3px); }
+
+  /* ---------- BOTÃO FLUTUANTE DO WHATSAPP ---------- */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 998;
+    background-color: #25D366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+  }
+  .whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+  }
+  .whatsapp-float svg {
+    width: 34px;
+    height: 34px;
+    fill: currentColor;
+  }
+
+  @media (max-width:640px){
+    footer{ padding:40px 0 20px; }
+    .footer-top{ flex-direction:column; }
+    .whatsapp-float { bottom: 20px; right: 20px; width: 54px; height: 54px; }
+    .whatsapp-float svg { width: 30px; height: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header id="site-header">
+  <div class="header-inner">
+    <a href="https://wiadigital.com.br/pontoadicional">
+      <img class="logo-img" src="../logotopo.png" alt="Wianet Telecom">
+    </a>
+    <div class="header-right">
+      <a class="header-phone" href="https://wa.me/5551941060689" target="_blank" rel="noopener">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (51) 4106-0689
+      </a>
+      <a href="https://wiadigital.com.br/pontoadicional" class="btn-cta">Voltar para o Sorteio</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= DOCUMENT SECTION ================= -->
+<main class="doc-section">
+  <div class="wrap">
+    <a href="https://wiadigital.com.br/pontoadicional" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Voltar para a página do sorteio
+    </a>
+
+    <div class="doc-header">
+      <span class="eyebrow">Documento Oficial</span>
+      <h1>Regulamento do Sorteio & Política de Privacidade</h1>
+    </div>
+
+    <div class="doc-card">
+      
+      <!-- REGULAMENTO -->
+      <div class="doc-block">
+        <h2>1. Regulamento Oficial do Sorteio Mensal</h2>
+        <p>Este regulamento estabelece as regras para a participação no Sorteio Mensal promovido pela <strong>Wianet Telecom</strong>.</p>
+        
+        <p><strong>1.1. Elegibilidade e Condições de Participação:</strong></p>
+        <ul>
+          <li>O sorteio é exclusivo para clientes ativos da Wianet Telecom.</li>
+          <li>O participante deve estar rigorosamente em dia com o pagamento de suas mensalidades até a data da realização do sorteio.</li>
+          <li>É obrigatório o preenchimento correto do formulário oficial na página <a href="https://wiadigital.com.br/pontoadicional" style="color:var(--orange-600); font-weight:700;">wiadigital.com.br/pontoadicional</a> com dados válidos (Nome, E-mail, CPF/Contrato e WhatsApp).</li>
+          <li>O participante deve curtir a publicação oficial do sorteio no perfil do Instagram da empresa (<strong>@wianettelecomltda</strong>).</li>
+        </ul>
+
+        <p><strong>1.2. O Prêmio:</strong></p>
+        <ul>
+          <li>O prêmio consiste em 01 (um) Ponto Adicional de Wi-Fi gratuito instalado no endereço do contrato do cliente contemplado.</li>
+          <li>O prêmio inclui os equipamentos necessários em regime de comodato e a taxa de instalação isenta.</li>
+          <li>O prêmio é pessoal, intransferível e não poderá ser trocado por valor em dinheiro ou descontos na mensalidade.</li>
+        </ul>
+
+        <p><strong>1.3. Realização e Apuração:</strong></p>
+        <ul>
+          <li>O sorteio será realizado na data de <strong>30/08/2026</strong> por meio de sorteador eletrônico.</li>
+          <li>A divulgação do resultado será realizada nas redes sociais oficiais da Wianet Telecom.</li>
+          <li>A equipe entrará em contato com o ganhador via WhatsApp ou telefone cadastrado em até 48 horas úteis após o sorteio.</li>
+          <li>Caso o ganhador sorteado não preencha os requisitos (como estar inadimplente ou não ser cliente ativo), um novo sorteio será realizado imediatamente.</li>
+        </ul>
+      </div>
+
+      <hr style="border:0; border-top:1px solid var(--border); margin:32px 0;">
+
+      <!-- POLÍTICA DE PRIVACIDADE -->
+      <div class="doc-block">
+        <h2>2. Política de Privacidade e Proteção de Dados (LGPD)</h2>
+        <p>A Wianet Telecom tem o compromisso de respeitar a sua privacidade e proteger seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD).</p>
+        
+        <p><strong>2.1. Coleta e Uso das Informações:</strong></p>
+        <p>Os dados coletados no formulário (Nome completo, E-mail, CPF/Contrato e WhatsApp) serão utilizados estritamente para:</p>
+        <ul>
+          <li>Validar a condição de cliente ativo e adimplente da Wianet Telecom;</li>
+          <li>Gerar a identificação do participante e realizar a apuração do ganhador;</li>
+          <li>Entrar em contato para agendamento da instalação do prêmio e comunicação referente ao sorteio.</li>
+        </ul>
+
+        <p><strong>2.2. Compartilhamento e Segurança:</strong></p>
+        <p>A Wianet Telecom não comercializa, vende ou compartilha seus dados pessoais com terceiros para fins publicitários de terceiros. Seus dados são armazenados em ambiente seguro com criptografia e acesso restrito.</p>
+
+        <p><strong>2.3. Direitos do Titular:</strong></p>
+        <p>O participante tem o direito de solicitar a atualização, verificação ou exclusão de seus dados da base do sorteio a qualquer momento através dos nossos canais de atendimento oficiais.</p>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img class="footer-logo-img" src="../logorodape.png" alt="Wianet Telecom">
+        <p>Internet de fibra óptica com atendimento local. Conectividade de verdade para sua casa e sua família.</p>
+        <div class="social-row">
+          <a href="https://www.instagram.com/wianettelecomltda/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61555660452120" target="_blank" rel="noopener" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://wa.me/5551941060689" target="_blank" rel="noopener" aria-label="Telefone"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h5>Sorteio</h5>
+          <a href="https://wiadigital.com.br/pontoadicional">Cadastre-se</a>
+          <a href="https://wiadigital.com.br/regulamentos">Regulamento</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contato</h5>
+          <p>(51) 4106-0689</p>
+          <p>wianettelecomcanoas@gmail.com</p>
+          <p>Porto Alegre · RS</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Wianet Telecom. Todos os direitos reservados.</span>
+      <span>Sorteio a ser realizado em 30/08/2026. Válido apenas para clientes com contrato ativo. Consulte o regulamento completo.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= BOTÃO FLUTUANTE DO WHATSAPP ================= -->
+<a href="https://wa.me/5551941060689" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contato via WhatsApp">
+  <svg viewBox="0 0 32 32">
+    <path d="M16 2A13 13 0 0 0 4.68 21.25L3 27.5l6.43-1.64A13 13 0 1 0 16 2zm0 23.8a10.74 10.74 0 0 1-5.46-1.5l-.39-.23-4.06 1 1.05-3.92-.25-.4A10.8 10.8 0 1 1 16 25.8zm5.92-8.07c-.32-.16-1.92-.95-2.22-1.06s-.52-.16-.74.16-.85 1.06-1.05 1.28-.39.24-.71.08a9 9 0 0 1-2.64-1.63 9.9 9.9 0 0 1-1.83-2.28c-.19-.32 0-.49.14-.65s.32-.37.48-.56a2.1 2.1 0 0 0 .32-.53.58.58 0 0 0 0-.56c-.08-.16-.74-1.78-1-2.43s-.56-.54-.77-.55h-.66a1.27 1.27 0 0 0-.92.43 3.86 3.86 0 0 0-1.2 2.87 6.72 6.72 0 0 0 1.41 3.56 15.37 15.37 0 0 0 5.9 5.21c2.19.95 2.64.76 3.12.72a2.65 2.65 0 0 0 1.76-1.24 2.18 2.18 0 0 0 .15-1.24c-.08-.12-.24-.2-.56-.36z"/>
+  </svg>
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 12);
+  }, { passive:true });
+</script>
+
+</body>
+</html>
