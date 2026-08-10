@@ -10,6 +10,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
+<!-- SUPABASE JS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 <style>
   :root{
     --navy-950:#0A1533;
@@ -801,6 +804,13 @@
 </div>
 
 <script>
+// =========================================================================
+// INICIALIZAÇÃO DO SUPABASE
+// =========================================================================
+const SUPABASE_URL = 'SUA_SUPABASE_URL'; // Substitua pelo seu Project URL
+const SUPABASE_KEY = 'SUA_SUPABASE_ANON_KEY'; // Substitua pela sua API anon public key
+const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
 document.getElementById('year').textContent = new Date().getFullYear();
 
 /* ---------- header scroll shadow ---------- */
@@ -867,7 +877,7 @@ whatsInput.addEventListener('input', () => {
   whatsInput.value = out.trim();
 });
 
-/* ---------- form validation + modal submit ---------- */
+/* ---------- form validation + modal submit + SUPABASE SAVE ---------- */
 const form = document.getElementById('raffle-form');
 const submitBtn = document.getElementById('submit-btn');
 const consentErr = document.getElementById('consent-err');
@@ -884,7 +894,41 @@ function closeModal() {
   document.querySelectorAll('.field').forEach(f => f.classList.remove('valid', 'error'));
 }
 
-form.addEventListener('submit', (e) => {
+// Função para gerar token e salvar de forma assíncrona garantindo unicidade no banco
+async function gerarEGravarParticipante(dadosCliente) {
+  let salvo = false;
+  let codigoGerado = '';
+  let tentativas = 0;
+
+  while(!salvo && tentativas < 5) {
+    tentativas++;
+    codigoGerado = 'WNT-' + Math.random().toString(36).slice(2,8).toUpperCase();
+
+    const { data, error } = await _supabase
+      .from('participantes_sorteio')
+      .insert([
+        {
+          nome: dadosCliente.nome,
+          email: dadosCliente.email,
+          doc: dadosCliente.doc,
+          whats: dadosCliente.whats,
+          codigo: codigoGerado
+        }
+      ]);
+
+    if (!error) {
+      salvo = true;
+    } else if (error.code !== '23505') { // Se o erro não for de código duplicado, encerra a tentativa
+      console.error('Erro ao salvar participante:', error);
+      alert('Ocorreu um erro ao registrar sua participação. Por favor, tente novamente.');
+      return null;
+    }
+  }
+
+  return salvo ? codigoGerado : null;
+}
+
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
   let ok = true;
 
@@ -919,12 +963,20 @@ form.addEventListener('submit', (e) => {
   if(!ok) return;
 
   submitBtn.classList.add('loading');
-  setTimeout(() => {
-    submitBtn.classList.remove('loading');
-    const code = 'WNT-' + Math.random().toString(36).slice(2,8).toUpperCase();
-    document.getElementById('modal-success-code').textContent = 'CÓDIGO DA PARTICIPAÇÃO: ' + code;
+
+  const tokenUnico = await gerarEGravarParticipante({
+    nome: nomeVal,
+    email: emailVal,
+    doc: form.doc.value,
+    whats: form.whats.value
+  });
+
+  submitBtn.classList.remove('loading');
+
+  if(tokenUnico) {
+    document.getElementById('modal-success-code').textContent = 'CÓDIGO DA PARTICIPAÇÃO: ' + tokenUnico;
     modal.classList.add('active');
-  }, 1000);
+  }
 });
 
 /* ---------- live activity toast ---------- */
