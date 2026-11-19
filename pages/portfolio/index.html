@@ -118,61 +118,134 @@
       </div>
       <h1 class="font-heading font-extrabold text-4xl sm:text-6xl text-white tracking-tight">Nosso <span class="text-blue-500">Portfólio</span></h1>
       <p class="mt-4 text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">
-        Sites, sistemas e aplicativos desenvolvidos sob medida para empresas que precisam de tecnologia alinhada ao negócio.
+        Sistemas, sites e aplicativos feitos sob medida. Projetos reais, no ar e em uso todos os dias.
       </p>
     </div>
   </section>
 
-  <!-- FILTROS DE CATEGORIA -->
-  <section class="pb-6 px-6 bg-brand-black">
-    <div class="max-w-7xl mx-auto">
-      <div id="filter-container" class="flex items-center justify-start md:justify-center gap-3 overflow-x-auto scrollbar-hide py-3 px-2">
-        <!-- Renderizado dinamicamente pelo JavaScript -->
-      </div>
-    </div>
+  <!-- NAVEGAÇÃO POR TIPO DE PROJETO -->
+  <section class="pb-4 px-6 bg-brand-black">
+    <nav class="max-w-7xl mx-auto flex flex-wrap justify-center gap-3 text-xs font-semibold" aria-label="Tipos de projeto">
+      <a href="#wiauth" class="px-5 py-2.5 rounded-full bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white border border-white/10 transition-all">Sistema para provedores</a>
+      <a href="#sites" class="px-5 py-2.5 rounded-full bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white border border-white/10 transition-all">Sites para provedores</a>
+      <a href="#apps" class="px-5 py-2.5 rounded-full bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white border border-white/10 transition-all">Aplicativos</a>
+    </nav>
   </section>
 
-  <!-- GRID DE PORTFÓLIO -->
-  <section class="py-6 px-6 bg-brand-black flex-grow">
-    <div class="max-w-7xl mx-auto">
-      <div id="portfolio-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[400px]">
-        <!-- Renderizado dinamicamente pelo JavaScript -->
-      </div>
-
-      <!-- PAGINAÇÃO -->
-      <div id="pagination-container" class="mt-12 flex items-center justify-center gap-2">
-        <!-- Renderizado dinamicamente pelo JavaScript se houver mais de 6 itens -->
-      </div>
-    </div>
-  </section>
-
-  <!-- MODAL DE PREVIEW / AMPLIAR -->
-  <div id="project-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden items-center justify-center p-4 sm:p-6 transition-opacity duration-300">
-    <div class="bg-brand-darkCard border border-white/10 w-full max-w-5xl rounded-2xl overflow-hidden flex flex-col max-h-[90vh] shadow-2xl relative">
-      <!-- Modal Header -->
-      <div class="flex items-center justify-between p-4 border-b border-white/10 bg-black/40">
-        <div>
-          <span id="modal-tag" class="text-[10px] font-mono font-bold text-gray-400 uppercase tracking-wider block"></span>
-          <h3 id="modal-title" class="font-heading font-bold text-lg text-white"></h3>
+  <!-- CASE 1: WIAUTH -->
+  <section id="wiauth" class="py-14 px-6 bg-brand-black scroll-mt-28">
+    <div class="max-w-7xl mx-auto bg-brand-darkCard border border-white/10 rounded-3xl overflow-hidden grid lg:grid-cols-2">
+      <div class="p-8 sm:p-12 flex flex-col justify-center">
+        <div class="flex items-center gap-4 mb-6">
+          <img src="/pages/portfolio/img/wiauth-logo.png" alt="WIAUTH" class="h-12 w-auto bg-white rounded-xl px-3 py-1.5" loading="lazy">
+          <span class="text-[11px] font-mono font-bold text-blue-400 border border-blue-500/30 bg-blue-950/40 rounded-full px-3 py-1">Produto da Wia Digital</span>
         </div>
-        <button onclick="closeModal()" class="w-8 h-8 rounded-full bg-white/5 hover:bg-white/15 text-gray-400 hover:text-white flex items-center justify-center border border-white/10 transition-all">
-          <i data-lucide="x" class="w-4 h-4"></i>
-        </button>
+        <h2 class="font-heading font-extrabold text-3xl sm:text-4xl text-white tracking-tight leading-tight">WIAUTH: o sistema completo do provedor de internet</h2>
+        <p class="mt-4 text-gray-400 text-sm sm:text-base leading-relaxed">Clientes, cobrança, contrato digital, ordens de serviço, estoque e atendimento num lugar só, com um app para cada pessoa da equipe. Em uso todos os dias por um provedor de fibra óptica do Rio Grande do Sul.</p>
+        <div class="mt-6 flex flex-wrap gap-2" aria-label="Módulos do WIAUTH">
+          <span class="text-xs text-gray-200 bg-white/5 border border-white/10 rounded-lg px-3 py-1.5"><b class="text-white">WIACOB</b> cobranças</span>
+          <span class="text-xs text-gray-200 bg-white/5 border border-white/10 rounded-lg px-3 py-1.5"><b class="text-white">WIAOS</b> app do técnico</span>
+          <span class="text-xs text-gray-200 bg-white/5 border border-white/10 rounded-lg px-3 py-1.5"><b class="text-white">WIAPP</b> app do cliente</span>
+          <span class="text-xs text-gray-200 bg-white/5 border border-white/10 rounded-lg px-3 py-1.5"><b class="text-white">WIASIGN</b> contratos digitais</span>
+          <span class="text-xs text-gray-200 bg-white/5 border border-white/10 rounded-lg px-3 py-1.5"><b class="text-white">WIABOT</b> WhatsApp</span>
+          <span class="text-xs text-gray-200 bg-white/5 border border-white/10 rounded-lg px-3 py-1.5"><b class="text-white">WIAGEO</b> mapa da rede</span>
+          <span class="text-xs text-gray-200 bg-white/5 border border-white/10 rounded-lg px-3 py-1.5"><b class="text-white">WIALMOX</b> estoque</span>
+          <span class="text-xs text-gray-200 bg-white/5 border border-white/10 rounded-lg px-3 py-1.5"><b class="text-white">WIAPONTO</b> ponto da equipe</span>
+          <span class="text-xs text-gray-200 bg-white/5 border border-white/10 rounded-lg px-3 py-1.5"><b class="text-white">WIASITE</b> site do provedor</span>
+          <span class="text-xs text-gray-200 bg-white/5 border border-white/10 rounded-lg px-3 py-1.5"><b class="text-white">WIACAM</b> câmeras</span>
+        </div>
+        <ul class="mt-6 space-y-2 text-sm text-gray-300">
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>Cobrança automática pelo WhatsApp, com Pix e boleto, e bloqueio e desbloqueio sozinhos.</li>
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>Contrato aceito pelo celular, com selfie e documento.</li>
+          <li class="flex gap-3"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>O técnico fecha a O.S. no app, com fotos obrigatórias, mesmo sem internet.</li>
+        </ul>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="https://wa.me/5551989019193?text=Ol%C3%A1!%20Quero%20conhecer%20o%20WIAUTH%20para%20o%20meu%20provedor." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs px-6 py-3.5 rounded-xl transition-all">Quero ver no meu provedor</a>
+          <a href="/servicos" class="inline-flex items-center gap-2 bg-transparent hover:bg-white/5 text-white font-bold text-xs px-6 py-3.5 rounded-xl border border-white/20 transition-all">Ver serviços</a>
+        </div>
       </div>
-
-      <!-- Modal Body (Preview Rolável) -->
-      <div id="modal-body" class="flex-grow overflow-y-auto bg-black/60 relative min-h-[350px] max-h-[65vh]">
-        <!-- O conteúdo dinâmico (iframe ou visualização customizada) será inserido via JS -->
-      </div>
-
-      <!-- Modal Footer -->
-      <div class="p-4 border-t border-white/10 bg-black/40 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p id="modal-description" class="text-xs text-gray-400 max-w-xl text-center sm:text-left leading-relaxed"></p>
-        <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gray-200 hover:bg-white text-gray-900 font-bold text-xs py-3 px-6 rounded-xl transition-all shrink-0">
-  Ver projeto <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-</a>
+      <div class="relative bg-gradient-to-br from-blue-950/60 to-slate-950 p-8 sm:p-10 flex items-end justify-center gap-4 overflow-hidden min-h-[420px]">
+        <span class="absolute top-5 right-5 text-[10px] font-bold text-slate-900 bg-amber-400 rounded px-2 py-1">DADOS FICTÍCIOS</span>
+        <button type="button" data-ampliar="/pages/portfolio/img/wiaos-inicio.webp" data-legenda="WIAOS: o dia do técnico" class="w-[44%] max-w-[230px] rounded-[28px] bg-black p-2 shadow-2xl translate-y-6 hover:-translate-y-0 transition-transform"><img src="/pages/portfolio/img/wiaos-inicio.webp" alt="Tela inicial do app do técnico" class="rounded-[22px] w-full" loading="lazy"></button>
+        <button type="button" data-ampliar="/pages/portfolio/img/wiaos-fotos.webp" data-legenda="WIAOS: fotos obrigatórias da visita" class="w-[44%] max-w-[230px] rounded-[28px] bg-black p-2 shadow-2xl hover:-translate-y-2 transition-transform"><img src="/pages/portfolio/img/wiaos-fotos.webp" alt="Fotos obrigatórias da visita" class="rounded-[22px] w-full" loading="lazy"></button>
       </div>
     </div>
+  </section>
+
+  <!-- SITES PARA PROVEDORES -->
+  <section id="sites" class="py-14 px-6 bg-brand-black scroll-mt-28">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-2xl mb-10">
+        <h2 class="font-heading font-bold text-3xl text-white">Sites para provedores</h2>
+        <p class="mt-3 text-gray-400 text-sm">Sites que vendem: planos claros, consulta de cobertura pelo endereço e o pedido indo direto para a equipe.</p>
+      </div>
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Gaúchos -->
+        <article class="bg-brand-darkCard border border-white/10 rounded-3xl overflow-hidden flex flex-col">
+          <div class="relative bg-[#0b4a30] p-5 sm:p-6">
+            <button type="button" data-ampliar="/pages/portfolio/img/gauchos-inicio.webp" data-legenda="Gaúchos Telecom: início do site" class="block w-[85%] rounded-xl overflow-hidden shadow-2xl ring-1 ring-white/10"><img src="/pages/portfolio/img/gauchos-inicio.webp" alt="Início do site da Gaúchos Telecom" class="w-full" loading="lazy"></button>
+            <button type="button" data-ampliar="/pages/portfolio/img/gauchos-celular.webp" data-legenda="Gaúchos Telecom: no celular" class="absolute right-5 bottom-4 w-[24%] rounded-2xl bg-black p-1.5 shadow-2xl"><img src="/pages/portfolio/img/gauchos-celular.webp" alt="Site da Gaúchos Telecom no celular" class="rounded-xl w-full" loading="lazy"></button>
+          </div>
+          <div class="p-7 flex-1 flex flex-col">
+            <span class="text-[11px] font-mono font-bold text-emerald-400">Site institucional · 2026</span>
+            <h3 class="mt-2 font-heading font-bold text-2xl text-white">Gaúchos Telecom</h3>
+            <p class="mt-3 text-gray-400 text-sm leading-relaxed">Site novo de ponta a ponta, com a identidade gaúcha da marca: planos por categoria, indicação do plano pelo uso da casa, comparação de velocidade e consulta de cobertura no mapa da rede.</p>
+            <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-xs text-gray-300">
+              <li class="bg-white/5 rounded-lg px-3 py-2">Quem usa a internet aí?</li>
+              <li class="bg-white/5 rounded-lg px-3 py-2">Arrasta e vê a diferença</li>
+              <li class="bg-white/5 rounded-lg px-3 py-2">Cobertura pelo CEP</li>
+              <li class="bg-white/5 rounded-lg px-3 py-2">Pedido direto para a equipe</li>
+            </ul>
+            <div class="mt-auto pt-6"><a href="https://gauchostelecom.com.br/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-gray-200 hover:bg-white text-gray-900 font-bold text-xs py-3 px-4 rounded-xl transition-all">Ver o site ao vivo</a></div>
+          </div>
+        </article>
+        <!-- Wianet -->
+        <article class="bg-brand-darkCard border border-white/10 rounded-3xl overflow-hidden flex flex-col">
+          <div class="relative bg-[#1a2c6a] p-5 sm:p-6">
+            <button type="button" data-ampliar="/pages/portfolio/img/wianet-inicio.webp" data-legenda="Wianet Telecom: início do site" class="block w-[85%] rounded-xl overflow-hidden shadow-2xl ring-1 ring-white/10"><img src="/pages/portfolio/img/wianet-inicio.webp" alt="Início do site da Wianet Telecom" class="w-full" loading="lazy"></button>
+            <button type="button" data-ampliar="/pages/portfolio/img/wianet-cobertura.webp" data-legenda="Wianet Telecom: consulta de cobertura" class="absolute right-5 bottom-4 w-[36%] rounded-xl overflow-hidden shadow-2xl ring-1 ring-white/10"><img src="/pages/portfolio/img/wianet-cobertura.webp" alt="Consulta de cobertura do site da Wianet" class="w-full" loading="lazy"></button>
+          </div>
+          <div class="p-7 flex-1 flex flex-col">
+            <span class="text-[11px] font-mono font-bold text-blue-400">Site do provedor · módulo WIASITE do WIAUTH</span>
+            <h3 class="mt-2 font-heading font-bold text-2xl text-white">Wianet Telecom</h3>
+            <p class="mt-3 text-gray-400 text-sm leading-relaxed">O site lê os planos e preços direto do sistema, consulta a cobertura no mapa da rede e entrega cada pedido pronto para a equipe chamar no WhatsApp.</p>
+            <ul class="mt-4 grid sm:grid-cols-2 gap-2 text-xs text-gray-300">
+              <li class="bg-white/5 rounded-lg px-3 py-2">Planos sempre certos</li>
+              <li class="bg-white/5 rounded-lg px-3 py-2">Onde colocar o roteador</li>
+              <li class="bg-white/5 rounded-lg px-3 py-2">Instalação grátis em destaque</li>
+              <li class="bg-white/5 rounded-lg px-3 py-2">Área do cliente</li>
+            </ul>
+            <div class="mt-auto pt-6"><a href="https://wianettelecom.com.br/" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-gray-200 hover:bg-white text-gray-900 font-bold text-xs py-3 px-4 rounded-xl transition-all">Ver o site ao vivo</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- APLICATIVOS -->
+  <section id="apps" class="py-14 px-6 bg-brand-black scroll-mt-28">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-2xl mb-10">
+        <h2 class="font-heading font-bold text-3xl text-white">WIAOS: o app do técnico</h2>
+        <p class="mt-3 text-gray-400 text-sm">Instalado no celular como aplicativo. A visita chega organizada e o técnico fecha a O.S. ali mesmo, com fotos, assinatura e o cliente navegando na hora certa.</p>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
+        <figure><button type="button" data-ampliar="/pages/portfolio/img/wiaos-inicio.webp" data-legenda="O dia do técnico" class="w-full rounded-[26px] bg-black p-2 ring-1 ring-white/10 hover:ring-blue-500/60 transition"><img src="/pages/portfolio/img/wiaos-inicio.webp" alt="Agenda do dia no WIAOS" class="rounded-[20px] w-full" loading="lazy"></button><figcaption class="mt-3 text-xs text-gray-400 text-center">O dia do técnico</figcaption></figure>
+        <figure><button type="button" data-ampliar="/pages/portfolio/img/wiaos-detalhe.webp" data-legenda="A visita inteira na mão" class="w-full rounded-[26px] bg-black p-2 ring-1 ring-white/10 hover:ring-blue-500/60 transition"><img src="/pages/portfolio/img/wiaos-detalhe.webp" alt="Detalhe da visita no WIAOS" class="rounded-[20px] w-full" loading="lazy"></button><figcaption class="mt-3 text-xs text-gray-400 text-center">A visita inteira na mão</figcaption></figure>
+        <figure><button type="button" data-ampliar="/pages/portfolio/img/wiaos-fotos.webp" data-legenda="Fotos obrigatórias" class="w-full rounded-[26px] bg-black p-2 ring-1 ring-white/10 hover:ring-blue-500/60 transition"><img src="/pages/portfolio/img/wiaos-fotos.webp" alt="Fotos obrigatórias no WIAOS" class="rounded-[20px] w-full" loading="lazy"></button><figcaption class="mt-3 text-xs text-gray-400 text-center">Fotos obrigatórias</figcaption></figure>
+        <figure><button type="button" data-ampliar="/pages/portfolio/img/wiaos-etapa2.webp" data-legenda="Fechamento em duas etapas" class="w-full rounded-[26px] bg-black p-2 ring-1 ring-white/10 hover:ring-blue-500/60 transition"><img src="/pages/portfolio/img/wiaos-etapa2.webp" alt="Fechamento da O.S. no WIAOS" class="rounded-[20px] w-full" loading="lazy"></button><figcaption class="mt-3 text-xs text-gray-400 text-center">Fechamento em duas etapas</figcaption></figure>
+      </div>
+      <p class="mt-4 text-[11px] text-gray-500">Telas com dados fictícios.</p>
+    </div>
+  </section>
+
+  <!-- AMPLIAR IMAGEM -->
+  <div id="ampliar" class="fixed inset-0 z-[60] bg-black/85 backdrop-blur-sm hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Imagem ampliada">
+    <figure class="max-w-5xl w-full max-h-full flex flex-col items-center">
+      <img id="ampliar-img" src="" alt="" class="max-h-[80vh] w-auto rounded-xl shadow-2xl">
+      <figcaption id="ampliar-legenda" class="mt-3 text-sm text-gray-300"></figcaption>
+      <button type="button" id="ampliar-fechar" class="mt-4 bg-white/10 hover:bg-white/20 text-white text-xs font-bold px-5 py-2.5 rounded-xl border border-white/20">Fechar</button>
+    </figure>
   </div>
 
   <!-- CTA FOOTER -->
@@ -274,314 +347,22 @@
       </div>
     </div>
   </footer>
-
-  <!-- SCRIPT DE FILTRAGEM, PAGINAÇÃO E MODAL -->
   <script>
-    // Base de Dados dos Projetos
-    const projectsData = [
-      {
-        id: 1,
-        title: "Gauchos Telecom",
-        tag: "Institucional",
-        categories: ["Institucional"],
-        gradient: "from-blue-950/80 to-slate-900",
-        textColor: "text-blue-400",
-        subtitle: "Plataforma Web & Portais ISP",
-        description: "Site institucional one-page desenvolvido sob medida para provedores de internet (ISP). Projetado com foco em alta conversão de vendas de planos de fibra óptica, interface intuitiva e integração de canais de autoatendimento para clientes.",
-        link: "https://gauchostelecom.com.br/",
-        previewUrl: "https://gauchostelecom.com.br/"
-      },
-      {
-        id: 2,
-        title: "WiaGeo",
-        tag: "Mapeamento & FTTH",
-        categories: ["Meus Serviços"],
-        gradient: "from-indigo-950/80 to-slate-900",
-        textColor: "text-indigo-400",
-        subtitle: "Documentação de Rede Óptica",
-        description: "Ferramenta definitiva para desenhar, documentar e gerenciar a infraestrutura física de rede de fibra óptica e geolocalização FTTH.",
-        link: "https://wiageo.vercel.app/",
-        previewUrl: "https://wiageo.vercel.app/"
-      },
-      {
-        id: 3,
-        title: "WiaPonto",
-        tag: "SaaS & Web App",
-        categories: ["Meus Serviços"],
-        gradient: "from-emerald-950/80 to-slate-900",
-        textColor: "text-emerald-400",
-        subtitle: "Gestão de Ponto Eletrônico",
-        description: "Controle de ponto inteligente para equipes externas e internas do seu ISP, com geolocalização, validações e relatórios em tempo real.",
-        link: "https://wiaponto.vercel.app/",
-        previewUrl: "https://wiaponto.vercel.app/"
-      },
-      {
-        id: 5,
-        title: "WiaAlmox",
-        tag: "Gestão de Estoque",
-        categories: ["Meus Serviços"],
-        gradient: "from-amber-950/80 to-slate-900",
-        textColor: "text-amber-400",
-        subtitle: "Controle de Insumos & Telecom",
-        description: "Elimina perdas operacionais monitorando insumos de telecom. Acompanha cada item desde a entrada do fornecedor até a aplicação final no cliente.",
-        link: "https://wialmox.vercel.app/",
-        previewUrl: "https://wialmox.vercel.app/"
-      },
-    ];
-
-    // Lista master de categorias disponíveis
-    const availableCategories = [
-      "Meus Serviços",
-      "E-commerce",
-      "Fintech",
-      "Institucional",
-      "Landing Page",
-      "Plataformas",
-      "SaaS",
-      "Startups",
-      "Sistemas",
-      "Apps"
-    ];
-
-    let currentCategory = "Meus Serviços";
-    let currentPage = 1;
-    const itemsPerPage = 6;
-
-    // Inicialização da Página
-    document.addEventListener("DOMContentLoaded", () => {
-      renderFilterButtons();
-      renderProjects();
-      lucide.createIcons();
-    });
-
-    // Renderiza botões de filtro (somente categorias que possuem projetos)
-    function renderFilterButtons() {
-      const filterContainer = document.getElementById("filter-container");
-      filterContainer.innerHTML = "";
-
-      availableCategories.forEach(cat => {
-        let count = 0;
-        if (cat === "Todos") {
-          count = projectsData.length;
-        } else {
-          count = projectsData.filter(p => p.categories.includes(cat)).length;
-        }
-
-        if (count > 0) {
-          const btn = document.createElement("button");
-          btn.type = "button";
-          
-          const isActive = currentCategory === cat;
-          btn.className = isActive 
-            ? "px-5 py-2.5 rounded-full text-xs font-semibold whitespace-nowrap bg-blue-600 text-white shadow-[0_0_15px_rgba(37,99,235,0.4)] transition-all"
-            : "px-5 py-2.5 rounded-full text-xs font-medium whitespace-nowrap bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white border border-white/10 transition-all";
-          
-          btn.textContent = cat;
-          btn.onclick = () => filterCategory(cat);
-          filterContainer.appendChild(btn);
-        }
-      });
-    }
-
-    // Filtrar categoria selecionada
-    function filterCategory(cat) {
-      currentCategory = cat;
-      currentPage = 1;
-      renderFilterButtons();
-      renderProjects();
-    }
-
-    // Renderiza o grid de projetos e a paginação
-    function renderProjects() {
-      const grid = document.getElementById("portfolio-grid");
-      const paginationContainer = document.getElementById("pagination-container");
-
-      // Filtrar itens
-      let filtered = projectsData;
-      if (currentCategory !== "Todos") {
-        filtered = projectsData.filter(p => p.categories.includes(currentCategory));
-      }
-
-      // Calcular Páginas
-      const totalPages = Math.ceil(filtered.length / itemsPerPage);
-      const startIndex = (currentPage - 1) * itemsPerPage;
-      const paginatedItems = filtered.slice(startIndex, startIndex + itemsPerPage);
-
-      // Renderizar Cards com Botão de Ampliar no Hover
-      if (paginatedItems.length === 0) {
-        grid.innerHTML = `
-          <div class="col-span-full text-center py-16 text-gray-500">
-            Nenhum projeto encontrado nesta categoria.
-          </div>
-        `;
-      } else {
-        grid.innerHTML = paginatedItems.map(p => `
-          <div class="bg-brand-darkCard border border-white/10 rounded-2xl overflow-hidden group hover:border-blue-500/50 transition-all flex flex-col justify-between">
-            <div>
-              <!-- Área Superior / Thumbnail (Preview iframe) -->
-              <div class="relative h-52 bg-slate-950 overflow-hidden border-b border-white/5">
-                <span class="absolute top-3 left-3 bg-black/70 backdrop-blur-md text-white text-[11px] font-medium px-3 py-1 rounded-full border border-white/10 z-20">
-                  ${p.tag}
-                </span>
-
-                <!-- Botão Ampliar (Aparece ao passar o mouse) -->
-                <button onclick="openModal(${p.id})" class="absolute bottom-3 right-3 z-30 bg-black/80 hover:bg-black text-white text-xs font-semibold px-3.5 py-2 rounded-xl border border-white/20 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center gap-2 transform translate-y-2 group-hover:translate-y-0 shadow-lg">
-                  <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i> Ampliar
-                </button>
-
-                <!-- Exibe preview live (Iframe) ou fallback caso não tenha previewUrl -->
-                ${p.previewUrl && p.previewUrl.startsWith('http') ? `
-                  <iframe 
-                    src="${p.previewUrl}" 
-                    title="${p.title}"
-                    class="w-[1280px] h-[800px] border-0 pointer-events-none transform scale-[0.27] origin-top-left select-none opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-                    loading="lazy"
-                    scrolling="no">
-                  </iframe>
-                ` : `
-                  <div class="w-full h-full bg-gradient-to-br ${p.gradient} flex items-center justify-center p-6 text-center">
-                    <div>
-                      <div class="font-heading font-extrabold text-3xl ${p.textColor} tracking-wider">${p.title}</div>
-                      <div class="text-xs text-gray-400 mt-1">${p.subtitle}</div>
-                    </div>
-                  </div>
-                `}
-              </div>
-
-              <!-- Informações do Card -->
-              <div class="p-6">
-                <h3 class="font-heading font-bold text-xl text-white group-hover:text-blue-400 transition-colors">${p.title}</h3>
-                <p class="text-gray-400 text-xs mt-2 leading-relaxed">
-                  ${p.description}
-                </p>
-              </div>
-            </div>
-
-            <!-- Botão Ver Projeto -->
-            <div class="p-6 pt-0">
-              <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="w-full inline-flex items-center justify-center gap-2 bg-gray-200 hover:bg-white text-gray-900 font-bold text-xs py-3 px-4 rounded-xl transition-all">
-  Ver projeto <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-</a>
-            </div>
-          </div>
-        `).join('');
-      }
-
-      // Renderizar Paginação
-      if (totalPages > 1) {
-        let paginationHTML = '';
-        
-        paginationHTML += `
-          <button onclick="goToPage(${currentPage - 1})" ${currentPage === 1 ? 'disabled class="opacity-40 cursor-not-allowed px-3 py-2 text-xs rounded-lg border border-white/10 text-gray-400"' : 'class="px-3 py-2 text-xs rounded-lg border border-white/10 text-gray-300 hover:bg-white/10 transition-all"'}>
-            Anterior
-          </button>
-        `;
-
-        for (let i = 1; i <= totalPages; i++) {
-          paginationHTML += `
-            <button onclick="goToPage(${i})" class="w-9 h-9 text-xs rounded-lg font-bold transition-all ${currentPage === i ? 'bg-blue-600 text-white shadow-[0_0_10px_rgba(37,99,235,0.5)]' : 'bg-white/5 hover:bg-white/10 border border-white/10 text-gray-300'}">
-              ${i}
-            </button>
-          `;
-        }
-
-        paginationHTML += `
-          <button onclick="goToPage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled class="opacity-40 cursor-not-allowed px-3 py-2 text-xs rounded-lg border border-white/10 text-gray-400"' : 'class="px-3 py-2 text-xs rounded-lg border border-white/10 text-gray-300 hover:bg-white/10 transition-all"'}>
-            Próximo
-          </button>
-        `;
-
-        paginationContainer.innerHTML = paginationHTML;
-      } else {
-        paginationContainer.innerHTML = '';
-      }
-
-      lucide.createIcons();
-    }
-
-    // Mudar de Página
-    function goToPage(page) {
-      currentPage = page;
-      renderProjects();
-      window.scrollTo({ top: document.getElementById('filter-container').offsetTop - 100, behavior: 'smooth' });
-    }
-
-    // LÓGICA DO MODAL (AMPLIAR)
-    function openModal(projectId) {
-      const project = projectsData.find(p => p.id === projectId);
-      if (!project) return;
-
-      document.getElementById('modal-title').textContent = project.title;
-      document.getElementById('modal-tag').textContent = project.tag;
-      document.getElementById('modal-description').textContent = project.description;
-      document.getElementById('modal-link').href = project.link;
-
-      const modalBody = document.getElementById('modal-body');
-
-      // Se houver uma URL externa cadastrada, exibe iframe, senão exibe preview dinâmico com scroll
-      if (project.previewUrl && project.previewUrl.startsWith('http')) {
-        modalBody.innerHTML = `
-          <iframe src="${project.previewUrl}" class="w-full h-full min-h-[500px] border-0" title="${project.title}"></iframe>
-        `;
-      } else {
-        modalBody.innerHTML = `
-          <div class="p-8 sm:p-12 flex flex-col items-center justify-center min-h-[450px] bg-gradient-to-b ${project.gradient} text-center space-y-6">
-            <div class="font-heading font-extrabold text-5xl sm:text-7xl ${project.textColor} tracking-tight">
-              ${project.title}
-            </div>
-            <p class="text-sm sm:text-base text-gray-300 max-w-xl leading-relaxed">
-              ${project.subtitle} — Exemplo de visualização expandida do sistema. Role para navegar ou acesse o link direto para saber mais.
-            </p>
-            <div class="w-full max-w-2xl bg-black/40 border border-white/10 rounded-2xl p-6 text-left space-y-4 backdrop-blur-md">
-              <div class="flex items-center gap-2 border-b border-white/10 pb-3">
-                <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
-                <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
-                <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
-                <span class="text-xs text-gray-400 font-mono ml-2">https://${project.title.toLowerCase()}.wiadigital.com.br</span>
-              </div>
-              <p class="text-xs text-gray-300 leading-relaxed">
-                ${project.description}
-              </p>
-              <div class="pt-4 grid grid-cols-2 gap-4 text-xs font-mono text-gray-400">
-                <div class="bg-white/5 p-3 rounded-lg border border-white/5">
-                  <span class="text-blue-400 block font-bold">Arquitetura:</span> Cloud Native / Microserviços
-                </div>
-                <div class="bg-white/5 p-3 rounded-lg border border-white/5">
-                  <span class="text-blue-400 block font-bold">Status:</span> Ativo & Escalável
-                </div>
-              </div>
-            </div>
-          </div>
-        `;
-      }
-
-      const modal = document.getElementById('project-modal');
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-      document.body.style.overflow = 'hidden'; // Impede rolagem no fundo
-      lucide.createIcons();
-    }
-
-    function closeModal() {
-      const modal = document.getElementById('project-modal');
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-      document.body.style.overflow = ''; // Libera a rolagem da página
-    }
-
-    // Fechar modal ao clicar na área escura de fora
-    document.getElementById('project-modal').addEventListener('click', (e) => {
-      if (e.target.id === 'project-modal') {
-        closeModal();
-      }
-    });
-
-    // Fechar modal com a tecla Esc
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeModal();
-      }
-    });
+    // Ampliar as imagens dos projetos (sem biblioteca)
+    (() => {
+      const caixa = document.getElementById('ampliar');
+      const img = document.getElementById('ampliar-img');
+      const leg = document.getElementById('ampliar-legenda');
+      const fechar = () => { caixa.classList.add('hidden'); caixa.classList.remove('flex'); img.src = ''; };
+      document.querySelectorAll('[data-ampliar]').forEach((b) => b.addEventListener('click', () => {
+        img.src = b.dataset.ampliar; img.alt = b.dataset.legenda || ''; leg.textContent = b.dataset.legenda || '';
+        caixa.classList.remove('hidden'); caixa.classList.add('flex');
+      }));
+      document.getElementById('ampliar-fechar').addEventListener('click', fechar);
+      caixa.addEventListener('click', (e) => { if (e.target === caixa) fechar(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') fechar(); });
+      if (window.lucide) lucide.createIcons();
+    })();
   </script>
 </body>
 </html>
